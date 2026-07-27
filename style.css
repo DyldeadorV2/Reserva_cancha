@@ -173,6 +173,119 @@ nav a:hover {
     color: #22c55e;
 }
 
+.hero-section {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 8% 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #1e2a44;
+    pointer-events: none;
+}
+
+.hero-section-text {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.hero-section-text h2 {
+    font-size: 2.4rem;
+    margin-bottom: 28px;
+    color: #f9fafb;
+}
+
+.hero-section-text p {
+    margin-bottom: 18px;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+}
+
+.hero-card h3 {
+    color: #22c55e;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.hero-card p {
+    margin-bottom: 0;
+    color: #e5e7eb;
+}
+
+.hero-table-wrap {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, .95);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+}
+
+.hero-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #111827;
+}
+
+.hero-table th,
+.hero-table td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-table th {
+    background: #22c55e;
+    color: white;
+}
+
+.hero-table tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.hero-contact-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.hero-contact-list p {
+    margin-bottom: 0;
+    padding: 16px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: #e5e7eb;
+}
+
+.hero-contact-list strong {
+    color: #22c55e;
+}
+
 footer {
     text-align: center;
     padding: 30px;
@@ -201,3 +314,4 @@ footer {
         margin: 0 10px;
     }
 }
+
