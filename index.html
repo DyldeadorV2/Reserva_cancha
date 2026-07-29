@@ -14,14 +14,14 @@
 
     <header>
 
-        <div class="logo">CanchaGO</div>
+        <div class="logo">CanchaG⚽</div>
 
         <nav>
             <a href="#1">Inicio</a>
             <a href="#2">Canchas</a>
             <a href="#3">Horarios</a>
             <a href="#4">Contacto</a>
-            <a href="./login.html">Iniciar sesión</a>
+            <a id="incioS" href="./login.html">Iniciar sesión</a>
 
         </nav>
 
@@ -46,15 +46,17 @@
             <div>
                 <label>Cancha</label>
                 <select id="cancha-select">
-                    <option>Fútbol 5</option>
-                    <option>Fútbol 7</option>
-                    <option>Fútbol 11</option>
+                    <option value="1">Cancha Fútbol 5 A</option>
+                    <option value="2">Cancha Fútbol 5 B</option>
+                    <option value="3">Cancha Fútbol 7</option>
+                    <option value="4">Cancha de Pádel</option>
+                    <option value="5">Cancha de Tenis</option>
                 </select>
             </div>
 
             <div>
                 <label>Fecha</label>
-                <input  type="date" id="fecha-input">
+                <input type="date" id="fecha-input">
             </div>
 
             <div>
@@ -62,7 +64,7 @@
                 <input type="time" id="hora-input">
             </div>
 
-            <button onclick="reserva()">Reservar</button>
+            <button onclick="reservar()">Reservar</button>
 
         </div>
 
@@ -171,9 +173,28 @@
     </section>
 
     <footer>
-        © 2026 CanchaGO - Reserva de Canchas
+        © 2026 CanchaG⚽ - Reserva de Canchas
     </footer>
-<scripts  src="script.js"></scripts>
+    <script src="scripts.js"></script>
+
+    <script>
+        addEventListener("DOMContentLoaded", () => {
+            checklogin();
+        });
+
+        function checklogin() {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                return;
+            }
+            const btn = document.getElementById("incioS");
+            btn.textContent = "Cerrar sesión";
+            btn.addEventListener("click", () => {
+                localStorage.removeItem("token");
+            })
+        }
+    </script>
 
 </body>
+
 </html>

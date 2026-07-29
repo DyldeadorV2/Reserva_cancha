@@ -81,10 +81,12 @@ function login($email, $password)
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        return ['success' => true, 'message' => 'Inicio de sesión correcto'];
+        $user = $result->fetch_assoc();
+        unset($user['contraseña']);
+        return ['success' => true, 'message' => 'Inicio de sesión correcto', 'user' => $user];
     }
 
-    return ['success' => false, 'message' => 'Credenciales inválidas'];
+    return ['success' => false, 'message' => 'Credenciales inválidas', 'user' => null];
 }
 
 function eliminarReserva($id_reserva)
