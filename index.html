@@ -21,6 +21,8 @@
             <a href="#2">Canchas</a>
             <a href="#3">Horarios</a>
             <a href="#4">Contacto</a>
+            <a href="./login.html">Iniciar sesión</a>
+
         </nav>
 
     </header>
@@ -35,16 +37,15 @@
                 de tus partidos sin complicaciones. Todo desde un solo lugar.
             </p>
 
-            <a href="#" class="btn">Reservar ahora</a>
         </div>
 
         <div class="card">
 
-            <h2>Reserva rápida</h2>
+            <h2>Reserva </h2>
 
             <div>
                 <label>Cancha</label>
-                <select>
+                <select id="cancha-select">
                     <option>Fútbol 5</option>
                     <option>Fútbol 7</option>
                     <option>Fútbol 11</option>
@@ -53,15 +54,15 @@
 
             <div>
                 <label>Fecha</label>
-                <input type="date">
+                <input  type="date" id="fecha-input">
             </div>
 
             <div>
                 <label>Hora</label>
-                <input type="time">
+                <input type="time" id="hora-input">
             </div>
 
-            <button>Buscar disponibilidad</button>
+            <button onclick="reserva()">Reservar</button>
 
         </div>
 
@@ -172,6 +173,7 @@
     <footer>
         © 2026 CanchaGO - Reserva de Canchas
     </footer>
+<scripts  src="script.js"></scripts>
 
 </body>
 </html>
