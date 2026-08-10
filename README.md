@@ -29,8 +29,6 @@ Una vez finalizado el proceso, la reserva se almacena en MySQL junto con la info
 
 De esta manera, la aplicación mantiene un registro de las reservas realizadas y permite controlar la disponibilidad de las canchas.
 
-## Tecnologías utilizadas
-
 ### Frontend
 
 * HTML5
@@ -169,6 +167,8 @@ Algunas funcionalidades que podrían incorporarse en futuras versiones son:
 * Calendario para visualizar la disponibilidad de las canchas.
 
 ## Autor
+
+Autores del proyecto: Dylan D'Aloia y Mateo Baute
 
 Proyecto desarrollado como aplicación web para la gestión y reserva de canchas deportivas.
 
